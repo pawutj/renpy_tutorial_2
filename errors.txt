@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 14: invalid syntax
+    Character("อายาเซะ"color="#F0F8FF", who_outlines=[(2,"#000000")], what_outlines=[(2,"#000000")])
+                        ^
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Fri Aug 18 01:30:06 2023

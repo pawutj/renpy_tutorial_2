@@ -1,1 +1,2 @@
-# renpy_tutorial_2
+# renpy_framework
+renpy_framework
