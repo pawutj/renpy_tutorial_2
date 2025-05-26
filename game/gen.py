@@ -3,7 +3,7 @@
 #python gen.py > chap1.rpy
 
 import pandas as pd
-FILE_NAME = "renpy_tutorial.csv"
+FILE_NAME = "renpy_script_tutorial1.csv"
 VOICE_BASE_PATH="audio/voice"
 VOICE_PATH = ""
 SFX_BASE_PATH="audio/sfx"
@@ -13,7 +13,7 @@ shortcut_charector_1 = ""
 def show_charector(charector1,charector2):
 
 
-    if (character1 != "" and character2 != ""):
+    if (character1 != "" or character2 != ""):
         print(f'hide eri')
         print(f'hide ayase')
         print(f'hide mikan')
@@ -24,11 +24,11 @@ def show_charector(charector1,charector2):
     #2 Charector Case
     if ( charector2 != ""):
         print(f'show {character1} normal at left')
-        print(f'show {character2} normal at right with Dissolve(0.2) ')
+        print(f'show {character2} normal at right')
         return
         
     #1 Character Case
-    print(f'show {character1} normal at center with Dissolve(0.2) ')
+    print(f'show {character1} normal at center')
     return
 
 for i,c in data.iterrows():
