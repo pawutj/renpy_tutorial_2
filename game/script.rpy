@@ -45,9 +45,6 @@ init -2:
 
 
 label start:
-
-
-
-    jump chap_1
+    jump chap1
 
     return

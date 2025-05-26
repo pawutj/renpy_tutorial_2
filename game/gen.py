@@ -1,22 +1,23 @@
 #set PYTHONIOENCODING=utf-8
 #set PYTHONLEGACYWINDOWSSTDIO=utf-8
-#python gen.py > s5_4.rpy
+#python gen.py > chap1.rpy
 
 import pandas as pd
-FILE_NAME = "ex_maya_3.csv"
+FILE_NAME = "renpy_tutorial.csv"
 VOICE_BASE_PATH="audio/voice"
 VOICE_PATH = ""
 SFX_BASE_PATH="audio/sfx"
 data = pd.read_csv(FILE_NAME,encoding="utf-8")
 data = data.fillna("")
-zoom_in_cha = ""
 shortcut_charector_1 = ""
-def show_charector(charector1,charector2,zoom=False):
+def show_charector(charector1,charector2):
 
-    if ("hide" in charector1) :
-        return
-    if("hide" in charector2):
-        return 
+
+    if (character1 != "" and character2 != ""):
+        print(f'hide eri')
+        print(f'hide ayase')
+        print(f'hide mikan')
+
     if ( charector1 == "" ):
         return
     
@@ -30,25 +31,17 @@ def show_charector(charector1,charector2,zoom=False):
     print(f'show {character1} normal at center with Dissolve(0.2) ')
     return
 
-def hide_charector(charector1,charector2) :
-    if ("hide" in charector1) :
-        print(charector1)
-    if("hide" in charector2):
-        print(charector2)
-
 for i,c in data.iterrows():
     ### Assign ##############################
 
     bg = c['bg']
     bg_effect = c['bg_effect']
     bgm = c['bgm']
-    zoom = c['zoom']
     character1 = c['character1']
     character2 = c['character2']
     face = c['face']
     who_talk = c['who_talk']
     talk = c['talk']
-    talk_en = c['talk_en']
     voice = c['voice']
     sfx = c['sfx']
     ### Action ###############################
@@ -62,7 +55,7 @@ for i,c in data.iterrows():
     
     if(bgm =='stop'):
         print(f"stop music")
-    show_charector(character1, character2, zoom)
+    show_charector(character1, character2)
         
     if(sfx):
         print(f'play sound "{SFX_BASE_PATH}/{sfx}.mp3"')
@@ -79,8 +72,4 @@ for i,c in data.iterrows():
         else:
             print(f'th "{talk}" with dissolve')
     
-    if( character1 != "" and ("hide" not in character1)):
-        shortcut_charector_1 = character1
-    else:
-        shortcut_charector_1 = ""
-    hide_charector(character1,character2)
+print(f"return")
