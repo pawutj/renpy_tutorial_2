@@ -10,8 +10,7 @@ image classroom_morning = im.Scale("bg/classroom_morning.jpg",1920,1080)
 # The game starts here.
 
 
-
-define cat = Character("แมว", image ="cat" ,color="#F0F8FF", who_outlines=[(2,"#000000")], what_outlines=[(2,"#000000")])
+image school_park1 = im.Scale("bg/school_park1.jpg",1920,1080)
 define ayase = Character("อายาเสะ",image = "ayase" ,color="#F0F8FF", who_outlines=[(2,"#000000")], what_outlines=[(2,"#000000")])
 define eri = Character("เอริ",image = "eri" ,color="#F0F8FF", who_outlines=[(2,"#000000")], what_outlines=[(2,"#000000")])
 define mikan = Character("มิคัง",image = "mikan" ,color="#F0F8FF", who_outlines=[(2,"#000000")], what_outlines=[(2,"#000000")])
