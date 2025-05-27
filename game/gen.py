@@ -9,7 +9,6 @@ VOICE_PATH = ""
 SFX_BASE_PATH="audio/sfx"
 data = pd.read_csv(FILE_NAME,encoding="utf-8")
 data = data.fillna("")
-shortcut_charector_1 = ""
 def show_charector(charector1,charector2):
 
 
