@@ -5,7 +5,6 @@
 import pandas as pd
 FILE_NAME = "renpy_script_tutorial1.csv"
 VOICE_BASE_PATH="audio/voice"
-VOICE_PATH = ""
 SFX_BASE_PATH="audio/sfx"
 data = pd.read_csv(FILE_NAME,encoding="utf-8")
 data = data.fillna("")
@@ -60,7 +59,7 @@ for i,c in data.iterrows():
         print(f'play sound "{SFX_BASE_PATH}/{sfx}.mp3"')
 
     if(voice):
-        print(f'play sound "{VOICE_BASE_PATH}/{who_talk}/{VOICE_PATH}/{voice}.mp3"')
+        print(f'play sound "{VOICE_BASE_PATH}/{voice}.wav"')
     
     if(bg_effect):
         print(f'{bg_effect}')
